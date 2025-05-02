@@ -1,0 +1,4 @@
+world=/home/terraria/.local/share/Terraria/Worlds/REPLACE_WITH_WORLD_NAME.wld
+maxplayers=8
+port=7777
+# password=your_password

@@ -1,0 +1,22 @@
+services:
+  game-terraria:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    pull_policy: never
+    container_name: game-terraria
+    restart: unless-stopped
+    volumes:
+      - ./serverconfig.txt:/home/terraria/server/serverconfig.txt
+      - ./data:/home/terraria/.local/share/Terraria
+    ports:
+      - 7777:7777
+    networks:
+      - web-tailscale
+    stdin_open: true
+    tty: true
+
+networks:
+  web-tailscale:
+    external: true
+    name: web-tailscale
