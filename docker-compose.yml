@@ -7,8 +7,8 @@ services:
     container_name: game-terraria
     restart: unless-stopped
     volumes:
-      - ./serverconfig.txt:/home/terraria/server/serverconfig.txt
-      - ./data:/home/terraria/.local/share/Terraria
+      - ./serverconfig.txt:/home/terraria/server/serverconfig.txt:z
+      - ./data:/home/terraria/.local/share/Terraria:U
     ports:
       - 7777:7777
     networks:
